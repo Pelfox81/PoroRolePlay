@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORO ROLEPLAY</title>
+    <style>
+        body {
+            background-color: #333333; /* Fond gris foncé */
+            font-family: Arial, sans-serif; /* Définit la police de caractère du texte */
+            margin: 0; /* Supprime la marge par défaut */
+            padding: 0; /* Supprime le padding par défaut */
+            line-height: 1.5; /* Définit l'espacement entre les lignes de texte */
+        }
+
+        /* Conteneur de la barre d'onglets */
+        .tab-container {
+            display: flex; /* Utilise Flexbox pour l'alignement */
+            align-items: center; /* Centre verticalement */
+            justify-content: center; /* Centre horizontalement */
+            background-color: #f0f0f0; /* Couleur de fond de la barre */
+            padding: 10px; /* Espacement autour des onglets */
+            border-bottom: 1px solid #ccc; /* Bordure en bas */
+        }
+
+        /* Image à gauche */
+        .logo-img {
+            height: 50px; /* Hauteur de l'image */
+            margin-right: 20px; /* Espacement à droite de l'image */
+        }
+
+        .tab {
+            padding: 15px; /* Espacement interne des onglets */
+            cursor: pointer; /* Changement de curseur */
+            border: 1px solid #ccc; /* Bordure autour des onglets */
+            border-radius: 5px; /* Coins arrondis */
+            margin-right: 10px; /* Espacement entre les onglets */
+            background-color: #f0f0f0; /* Couleur de fond par défaut */
+            transition: background-color 0.3s; /* Transition pour un effet doux */
+        }
+
+        .tab:hover {
+            background-color: #ccc; /* Couleur de fond lors du survol */
+        }
+
+        /* Nouveau style pour le logo de Discord */
+        .discord-logo {
+            display: flex; /* Utilise Flexbox pour centrer l'image */
+            align-items: center; /* Centre verticalement */
+            justify-content: center; /* Centre horizontalement */
+            margin-left: 10px; /* Espacement à gauche de l'image */
+            cursor: pointer; /* Changement de curseur */
+            height: 30px; /* Hauteur de l'image */
+        }
+
+        .content {
+            display: none; /* Masque le contenu par défaut */
+			font-size: 19px;
+            background: #444444	; /* Couleur de fond pour le contenu */
+            padding: 100px; /* Espacement interne du contenu */
+            border: 1px solid #ccc; /* Bordure autour des contenus sauf accueil */
+            border-radius: 5px; /* Coins arrondis du contenu */
+            color: white; /* Met le texte en blanc */
+			
+        }
+
+        .custom-image { /* Classe pour définir la taille de l'image */
+            width: 300px; /* Largeur de l'image */
+            height: auto; /* Hauteur automatique pour conserver le ratio d'aspect */
+            display: block; /* Affiche l'image comme un bloc */
+            margin: 20px auto; /* Centre l'image horizontalement avec une marge en haut et en bas */
+        }
+
+        .image-container { /* Conteneur pour centrer uniquement l'image */
+            text-align: center; /* Centre le contenu de cette div */
+            margin-top: 20px; /* Marge en haut pour espacer le texte et l'image */
+        }
+
+        .accueil-background {
+            background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/aesthetic-gta-cityscape-desktop-wallpaper-preview.jpg'); /* Remplacez par l'URL de votre image de fond */
+            background-size: cover; /* Couvre tout le div */
+            background-position: center; /* Centre l'image de fond */
+            padding: 30px; /* Espacement interne */
+            border-radius: 5px; /* Coins arrondis */
+            color: white; /* Met le texte en blanc */
+            border: none; /* Supprime la bordure pour l'onglet Accueil */
+        }
+
+        .accueil-text {
+            font-size: 56px; /* Taille de police pour le texte de l'accueil */
+            text-align: center; /* Centre le texte */
+            margin-top: 100px; /* Marge pour espacer du haut */
+            font-weight: bold; /* Texte en gras */
+        }
+
+        .welcome-message {
+            font-size: 20px; /* Taille de police pour le message d'accueil */
+            text-align: center; /* Centre le texte */
+            margin-top: 20px; /* Marge en haut pour espacer du texte */
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("content");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  // Cache tous les contenus
+            }
+            document.getElementById(tabName).style.display = "block";  // Affiche le contenu de l'onglet sélectionné
+        }
+    </script>
+</head>
+<body>
+
+<div class="tab-container">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDw_O8Z1Eaqv-h-D9eITNjxrZatqzrp_aSOV8fI0LIfHTCJeArONmoz3YTyRrm8oJ_zdf9l3B7Pu2VxPgjBa3xyQJH5pvT4tJPs6m1k5LNgn1N1AMWoZboRZGwxP5EZYa68rnt3mZvOCfU8DC7sWmzomGkZSD7fhczf3vv_AGkKtFnbnY5PIWbNOdy230h/s320/Poro%20Poro.png" alt="Logo Poro" class="logo-img"> <!-- Remplace l'URL par celle de ton image -->
+    <div class="tab" onclick="openTab('accueil')">Accueil</div> <!-- Nouvel onglet "Accueil" -->
+    <div class="tab" onclick="openTab('fondamentaux')">Les Fondamentaux du RP </div>
+	<div class="tab" onclick="openTab('Reglement')">Règlements de Los Santos  </div>
+    <div class="tab" onclick="openTab('histoire')">Histoire de Poro</div>
+    <div class="discord-logo" onclick="window.open('https://discord.gg/JxbxcepXcZ');">
+        <img src="https://banner2.cleanpng.com/20180427/wvq/avearfvsn.webp" alt="Logo Discord" style="height: 30px;"> <!-- Remplace l'URL par celle de ton logo -->
+    </div>
+</div>
+
+
+<!-- Onglet Les fondamentaux du Rp et le règlement de Los santos -->
+
+<div id="fondamentaux" class="content active centered-content ">
+    <h1 style="
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/aesthetic-gta-cityscape-desktop-wallpaper-preview.jpg'); 
+    background-size: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+">
+    Les Fondamentaux du RP 
+    </h1>
+
+    <h2 style="text-align: center ; font-size: 2em; "><u>HRP (Hors RolePlay)</u></h2>
+    <ul>
+	     <p  align="justify">Actions réalisées par le joueur en dehors de son personnage. Cela inclut toutes les interactions ou décisions basées sur des informations obtenues hors du jeu, par exemple via Discord ou les streams.</p>
+    </ul>
+    <h2 style="text-align: center ; font-size: 2em;"><u>RP (RolePlay)</u></h2>
+	<ul>
+         <p  align="justify">Actions réalisées dans la peau de votre personnage ou des autres joueurs. Tous les choix et actions doivent être cohérents avec l’histoire et la personnalité de votre personnage.</p>
+    </ul>
+    <h2 style="text-align: center ; font-size: 2em;"><u>Termes Clés</u></h2>
+    <h3 style="text-align: center ; font-size: 1.5em;">Principes Essentiels</h3>
+    <ul>
+        <li><strong>Metagaming</strong>: Utiliser des informations obtenues en dehors du jeu est interdit. Tout dialogue ou information en dehors du jeu ne doit pas influencer votre comportement en RP.</li>
+        <li><strong>Power Gaming</strong>: Exploiter un défaut technique du jeu pour en tirer avantage est proscrit. Votre personnage doit être limité par les mêmes contraintes physiques et morales que les autres.</li>
+        <li><strong>Freekill</strong>: Tuer un autre joueur sans aucune justification RP est interdit et sévèrement sanctionné.</li>
+        <li><strong>Fear RP</strong>: Représenter correctement la peur lors de situations menaçantes. Ignorer une menace grave ou se montrer invincible est considéré comme du "no-fear".</li>
+        <li><strong>Force RP</strong>: Imposer une action à un joueur sans qu'il ait le choix de réagir, notamment hors des cadres RP, est à proscrire.</li>
+    </ul>
+    
+    <h3 style="text-align: center ; font-size: 1.5em;">Situations Spécifiques</h3>
+    <ul>
+        <li><strong>RP de Masse</strong>: Reconnaître la présence invisible de civils ou forces de l’ordre lors de scènes publiques. Par exemple, ne pas attaquer ou insulter une personne publiquement devant une station de police.</li>
+        <li><strong>Pain RP</strong>: Simuler la douleur physique en conséquence des blessures subies. Par exemple, boiter après une blessure à la jambe.</li>
+        <li><strong>Freepunch</strong>: Frapper un autre joueur sans raison RP valide. Les combats doivent avoir une justification et un déroulement cohérent.</li>
+        <li><strong>Carkill</strong>: Percuter délibérément un autre joueur avec un véhicule. Les accidents peuvent arriver, mais l’intention doit être clairement visible et raisonnable.</li>
+        <li><strong>Use Bug</strong>: Utiliser des bugs ou des glitches pour obtenir un avantage (exemple : duplications d’argent ou équipements) est passible de bannissement.</li>
+        <li><strong>Glitcher</strong>: Passer à travers les murs ou les objets du décor pour accéder à des zones fermées. Cela brise l'immersion et crée une inégalité.</li>
+        <li><strong>Insultes en RP</strong>: Les insultes doivent rester limitées et appropriées à la situation RP. Elles sont tolérées avec modération en jeu, mais doivent respecter la personne derrière l’écran.</li>
+    </ul>
+    
+    <h2 style="text-align: center ; font-size: 2em;"><u>Règles d’Interaction</u></h2>
+    <ul>
+        <li><strong>Fair Play</strong>: Respecter les autres joueurs, accepter les défaites et laisser à tous la chance de jouer leur scène. Il est essentiel de se rappeler que chacun est ici pour profiter du jeu.</li>
+        <li><strong>Raccourci-RP</strong>: Tirer des conclusions rapides sans preuves solides. Cela inclut les présomptions sur des véhicules ou des actions sans les vérifier avec des preuves RP.</li>
+        <li><strong>No Fear Police</strong>: Respecter l’autorité de la police et éviter de les provoquer sans raison. Cela inclut ne pas fuir ou attaquer sans logique RP.</li>
+        <li><strong>No Fear Gang / Orga / Mc</strong>: Respecter les groupes organisés et leurs territoires. Ignorer leur autorité ou leur force collective est contre l’esprit du RP.</li>
+    </ul>
+    </div>
+	
+	<div id="Reglement" class="content centered-content">
+	
+	<h1 style="
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/aesthetic-gta-cityscape-desktop-wallpaper-preview.jpg'); 
+    background-size: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+">
+    Règlement de Los Santos
+    </h1>
+    <h2 style="text-align: center ; font-size: 2em"><u>Règlement Général HRP</u></h2>
+	
+    <ol  align="justify">
+        <li><strong>Respect des Règles HRP</strong>: Toute infraction au règlement entraîne une sanction. Les interactions HRP doivent se faire en dehors du jeu et sans interférence avec le scénario. L’utilisation de mods non visuels pour améliorer l’expérience de jeu est strictement interdite.</li>
+        <li><strong>Zones Interdites</strong>: L’accès aux zones telles que les bases militaires, le porte-avions, la prison fédérale et les commissariats (sauf accueil) est strictement réservé.</li>
+        <li><strong>Retours de Coma et de Réanimation</strong>: Le retour sur scène après un coma ou une réanimation est interdit pour des raisons de continuité RP. Le joueur doit se reposer et reprendre son rôle en assumant les conséquences.</li>
+        <li><strong>Usage des Armes</strong>: L’usage des armes à feu doit être raisonné. Favorisez des interactions non-violentes autant que possible pour prolonger l’immersion et éviter des scènes courtes et répétitives.</li>
+        <li><strong>Gestion des Scènes</strong>: En tant que chef d’entreprise, vous devez être actif et donner vie à votre société. Engagez des actions et créez des interactions réalistes pour développer votre organisation.</li>
+    </ol>
+    
+	<p> ㅤ</p>
+	<h3 style="text-align: center"><b> [ PAS DE WIPE DE VOTRE PERSO POSSIBLE !!!! ]</b></h2>
+	
+    <h2 style="text-align: center ; font-size: 2em"><u>Gestion du Coma et KO</u></h2>
+	<h3 > A. Blessure et EMS</h3>
+	<p align="justify"> Lorsque votre personnage est blessé (chute, accident de voiture, touché par balle, etc.), il souffre. Vous devez appeler les EMS pour vous soigner ou vous réanimer.
+	Vous devez les attendre obligatoirement (peu importe le temps qu’ils mettent à arriver) s’ils ont accepté l'appel. Ne pas les attendre alors que l'appel a été accepté est un refus de RP. (Les ems sont appelé automatiquement si une peds est à proximité, vous pouvez faire un /911e si nécessaire). Vous pouvez déplacer les corps au sol. En revanche, cela impactera le bilan médical effectué par le médecin</p>
+    <h3 > B. KO</h3>
+    <p align="justify">Lorsque votre personnage subit un KO, jouez-le en conséquence, comme si vous étiez sonné ou en souffrance. Ne revenez pas immédiatement sur la scène après un KO.</p>
+    <h3>C. Coma</h3>
+    <p align="justify">Si vous tombez dans le coma, vous ne pouvez parler ni mémoriser ce qui est dit autour de vous. Respectez l'état de votre personnage et jouez avec cohérence. Les conséquences graves doivent être respectées. Lors d’un coma, un décompte de 5 minutes s’affiche sur votre écran, si un médecin vous relève avant la fin de ce décompte, vous pourrez vous souvenir partiellement de ce qu’il vous est arrivé. Si celui-ci vous relève après les 5 minutes, vous aurez tout oublié. Si vous utilisez l’unité X (le respawn), vous perdrez tout votre inventaire illégal. Lors d’une agression, vous devez attendre les ordres de votre agresseur pour appeler un ambulancier ou respawn s’il n’y a aucun ambulancier en service. Vous devez IMPÉRATIVEMENT attendre quelqu’un à l’hôpital en cas de respawn (unité X).  Lorsqu’un ambulancier intervient dans une scène RP et que vous nécessitez un soin particulier, vous devez absolument respecter leurs décisions.
+	Un respawn est considéré comme un oubli total même si vous le faites au bout de 2 minutes.
+	(Cependant, si vous avez été mis dans le coma pour X raison qui n’implique pas d’autre joueurs, vous pourrez vous souvenir de la raison de votre coma.)</p>
+	<h3>D. Mort</h3>
+	<p align="justify"> Si le directeur de l'hôpital ou un medecin haut placé estime que la cause de votre accident est bien trop importante, il peut se donner le droit de mettre fin à vos jours.</p>
+    
+	
+    <h3 style="text-align: center ; font-size: 2em"><u>1. La Police</u></h3>
+    <h3>1.1. Les courses-poursuites</h3>
+    <p  align="justify">Les courses-poursuites policières devraient être tactiques et réalistes. L'utilisation des "pits" (percuter un véhicule) serait autorisée selon la gravité de la situation, avec un délai de 5 minutes pour leur mise en œuvre. Le temps d’une course poursuite durera environ 10 à 15 min mais dépendra encore une fois de la gravité de la situation. Les stratégies doivent s'adapter au contexte, avec des interventions plus agressives en cas de danger imminent. Un gros choc pourrait mettre fin à la course pour les deux camps, évitant ainsi une simple dynamique répétitif de tir et de courses, rendant les poursuites plus nuancées. </p>
+	<h3>1.2. Les sanctions</h3>
+    <p  align="justify">Si un citoyen ne respecte pas la loi, il sera sanctionné en fonction de la gravité de son crime. La sanction pourrait-être dans l’ordre croissant, une amende, un garde à vu, un passage au tribunal, suivi de la prison à temps défini selon le crime. 
+	Si un policier ne respecte pas loi, il sera immédiatement mis à pied.</p>
+    <h3>1.3. Contrôles de fouilles</h3>
+    <p  align="justify">Les fouilles de polices seront effectuées uniquement en cas de délit, de conduite dangereuse, ou de transactions de drogues.
+	En revanche, la police se donnera le droit de fouiller quiconque en cas de Code Rouge
+	Dans le cas contraire, si un policier se permet de vous fouillez sans la moindre justification      ( trouver qu’un individu est suspect n’en fait pas partie ). Vous aurez alors le droit de portez plaintes au commissariat. Un système de plaintes contre l’abus des policiers sera mis en place.</p>
+    <h3>1.4. Corruption</h3>
+	<p  align="justify"> Pas de restrictions particulières, un policier peux être corrompu, un gangster peut être un policier infiltré ! Sa peine sera lourde s'il se fait attraper </p>
+    <p> ㅤ</p>
+	<h3 style="text-align: center"> <b>[ PORT D'ARMES NON-AUTORISEES EN LIEUX PUBLIQUES ] </b> </h3>
+	<h3 style="text-align: center ; font-size: 2em"><u>2. Économie et Développement de la Ville</u></h3>
+    <h3>2.1. Impacts des Activités Illégales</h3>
+    <p  align="justify">Les activités illégales représentent une part importante de l’économie de Los Santos. Elles sont risquées mais lucratives et modérément tolérées. En d'autres termes, tout joueur cherchant à adopter un comportement excessif ou inapproprié, similaire à celui que l'on pourrait retrouver dans un mode en ligne, risque un bannissement immédiat dans la première semaine. Il est donc essentiel de ne pas restreindre les joueurs respectueux des règles et désireux de s'amuser dans l'univers du serveur. Vous souhaitez engager des actions telles que tirer sur des policiers, braquer des individus ou aspirer à devenir le roi de la ville ? N’hésitez pas à le faire. Toutefois, certaines actions, comme quitter un hôpital après un coma, sont fortement déconseillées. En revanche, tout manquement au bon sens entraînera un bannissement sans explication, justification, ni possibilité de retour sur le serveur.</p>
+    <h3>2.2. Développement des Entreprises</h3>
+    <p  align="justify"> Une entreprise peut uniquement être acquise par l'achat du mlo. La personne qui achete le mlo pourra obtenir le job et rôle boss et pourra ensuite embaucher et faire ce qu'il veux. L'État soutient les entreprises locales par des subventions et des régulations pour lutter contre les monopoles. La concurrence saine et l'innovation sont encouragées.</p>
+    
+    <h3 style="text-align: center ; font-size: 2em"><u>3. Respect et Civisme</u></h3>
+    <p align="justify">Notre ville s'engage à assurer la sécurité de tous ses habitants. La LSPD et le gouvernement veilleront au maintien de l'ordre et du bon sens. Un code civil et des règles seront prochainement instaurés, et nous vous invitons à les lire et à les respecter. Cela nous permettra de vivre en toute sérénité.
+	Toute personne dépassant gravement les limites ou enfreignant les règles sera passible d'un bannissement ou d'un wipe. Je tiens à souligner que notre objectif n'est pas de créer des conflits, mais d'établir un cadre clair pour encourager des comportements positifs et favoriser une communication ouverte. Ayez du savoir-vivre.
+	</p>
+    
+    <h3 style="text-align: center ; font-size: 2em"><u>4. Points Complémentaires</u></h3>
+    <h3>4.1. Respect des Règles du Serveur</h3>
+    <p>Tous les joueurs doivent suivre les règles du serveur concernant les interactions RP et HRP. Cela inclut la communication, les limitations de comportements abusifs et la tolérance envers les autres
+	<h3>4.2. Gestion des Conflits et Sanctions</h3>
+	<p>Le non-respect des règles peut entraîner des avertissements, des suspensions temporaires ou des bannissements définitifs. Toute action HRP visant à menacer, insulter ou intimider un autre joueur est strictement prohibée.</p>
+	<h3> 4.3. Report et Gestion des Plaintes</h3>
+	<p>Un système de report est mis en place pour signaler les comportements toxiques ou les infractions. Les plaintes doivent être documentées et justifiées avec des preuves tangibles.</p>
+</div>
+
+<!-- Onglet Histoire de Poro -->
+
+<div id="histoire" class="content">	
+     
+    <h1 style="
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/aesthetic-gta-cityscape-desktop-wallpaper-preview.jpg'); 
+    background-size: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+">
+    Histoire de Poro
+    </h1>
+	<h2> <u>Avant Los Santos</u></h2>
+    <p align="justify">Il fut un temps où la ville ne portait pas le nom de Los Santos. A l'époque, la grande ville de Poro City était un destination de rêve pour ceux qui voulait tenter leur chance.
+	
+	Comme beaucoup de grande ville, elle était aussi garnit de divers organisations criminels. Des gangs tels que les Ballas ou les Marabunta ainsi que des organisations mafieuses et militaires.
+	C'est d'ailleurs l'attaque de l'une d'entre elle qui fut l'un des plus grand drame américain. Une menace émise par une secte militaire qui fut sous estimé, répétant plusieurs attaques terroristes avant de mettre en place son grand projet : L'explosion d'une ogive nucléaire sur la ville.</p>
+	
+	<p align="justify">Quelques survivants ont pu être mis à l'abris dans un bunker mais la majorité des habitants périrent dans l'incident. Le 26 septembre 2021 marque la date de ce triste événement.</p>
+	<h2> <u>Aujourd'hui </u></h2>
+	<p align="justify">Après leur échappé du bunker, les survivants ont été évacué peu de temps après par les forces armés Américaine.
+	5 ans plus tard, la ville reprend son développement après une longue décontamination.
+	Il fallut encore 2 bonnes années pour que la grande majorité des bâtiments soit remis état et que l'ouverture officielle de la nouvelle ville de Los Santos soit effective.</p>
+	
+	<p align="justify">Date de la réouverture de Los Santos (Anciennement Poro City) :  04/12/2028 </p>
+	
+	<p align="justify">Nous somme actuellement en 2030 dans la ville de Poro City </p>
+	<img src="https://i.redd.it/h796v3fl7br21.png" alt="Poro City" class="custom-image" style="width: 1000px; height: auto;"> 
+</div>
+
+<!-- Onglet Acceuil -->
+
+<div id="accueil" class="content accueil-background" style="display: block;">
+    <h1 style="text-align: center; font-size: 5em; font-weight: bold ; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Bienvenue sur Poro RP, le meilleur serveur GTA RP calédonien sur FiveM.</h1>
+    <p style="text-align: center; font-size: 2em; font-weight: bold ; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8 ); ">
+        Si vous recherchez une expérience de jeu multijoueur exceptionnelle sur un serveur GTA RP français, Poro RP est fait pour vous. 
+        Notre serveur est conçu pour plonger les joueurs au cœur de l'univers de Grand Theft Auto, avec des scénarios captivants, des missions variées, 
+        une économie interactive, et des véhicules personnalisables. Nous nous engageons à fournir aux joueurs le meilleur rôle-play possible sur notre serveur GTAV !
+		<p> ㅤ</p>
+		<p> ㅤ</p>
+		<div class="discord-logo" onclick="window.open('https://discord.gg/JxbxcepXcZ');">
+        <img src="https://i0.wp.com/pasvegan.fr/wp-content/uploads/2019/08/rejoindre-discord-clic.jpg?fit=350%2C155&ssl=1" alt="Logo Discord" style="height: 150px;">
+        </div>
+		<p> ㅤ</p>
+		<p> ㅤ</p>
+		<p> ㅤ</p>
+		<p> ㅤ</p>
+		<p> ㅤ</p>
+		
+    </p>
+</div>
+
+<script>
+    // Ouvre le premier onglet par défaut
+    openTab('accueil'); // Ouvre l'onglet "Accueil" par défaut lors du chargement de la page
+</script>
+
+</body>
+</html>
